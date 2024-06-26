@@ -6,7 +6,7 @@
 /*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 11:26:06 by rchavez           #+#    #+#             */
-/*   Updated: 2024/06/26 16:03:50 by rchavez          ###   ########.fr       */
+/*   Updated: 2024/06/26 16:18:13 by rchavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,12 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct	s_link
+{
+	void			*data;
+	struct s_link	*next;
+}					link_t;
 
 int		ft_tolower(int c);
 int		ft_toupper(int c);
