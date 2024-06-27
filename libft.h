@@ -6,7 +6,7 @@
 /*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 11:26:06 by rchavez           #+#    #+#             */
-/*   Updated: 2024/06/26 16:18:13 by rchavez          ###   ########.fr       */
+/*   Updated: 2024/06/27 09:52:52 by rchavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,7 @@ void	link_append(link_t *new);
 void	*malloc_t_bad(size_t size);
 
 link_t	**get_head(void);
+
+char	*get_next_line(int fd);
 
 #endif
