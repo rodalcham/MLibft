@@ -6,7 +6,7 @@
 #    By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/25 10:48:20 by rchavez           #+#    #+#              #
-#    Updated: 2024/06/26 15:59:54 by rchavez          ###   ########.fr        #
+#    Updated: 2024/06/27 09:48:27 by rchavez          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,15 +33,23 @@ MCT = \
 	ft_malloc/ft_malloc_bad.c ft_malloc/ft_malloc.c\
 	ft_malloc/globals.c ft_malloc/list.c
 
+GNL = \
+	get_next_line/get_next_line.c get_next_line/get_next_line_utils.c
+
+BGNL = \
+	get_next_line/get_next_line_bonus.c get_next_line/get_next_line_utils_bonus.c
+
 OBJ = OBJ/
 
-OL = $(OBJ)/Libft
+OL = $(OBJ)Libft
 
-OM = $(OBJ)/ft_malloc
+OM = $(OBJ)ft_malloc
 
-OFILES = $(LIBFT:%.c=$(OBJ)%.o) $(MCT:%.c=$(OBJ)%.o)
+OG = $(OBJ)get_next_line
 
-BOFILES = $(LIBFT:%.c=$(OBJ)%.o) $(BLIBFT:%.c=$(OBJ)%.o) $(MCT:%.c=$(OBJ)%.o)
+OFILES = $(LIBFT:%.c=$(OBJ)%.o) $(MCT:%.c=$(OBJ)%.o) $(GNL:%.c=$(OBJ)%.o)
+
+BOFILES = $(LIBFT:%.c=$(OBJ)%.o) $(BLIBFT:%.c=$(OBJ)%.o) $(MCT:%.c=$(OBJ)%.o) $(BGNL:%.c=$(OBJ)%.o)
 
 NAME = libft.a
 
@@ -49,7 +57,7 @@ CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
-all: $(OL) $(OM) $(OFILES)
+all: $(OL) $(OM) $(OG) $(OFILES)
 	rm -f $(NAME)
 	ar rcs $(NAME) $(OFILES)
 
@@ -71,7 +79,12 @@ $(OM) : $(OBJ)
 		mkdir $(OM);\
 	fi
 
-bonus: $(OL) $(OM) $(BOFILES)
+$(OG) : $(OBJ)
+	@if [ ! -d $(OG) ]; then\
+		mkdir $(OG);\
+	fi
+
+bonus: $(OL) $(OM) $(OG) $(BOFILES)
 	rm -f $(NAME)
 	ar rcs $(NAME) $(BOFILES)
 
