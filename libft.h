@@ -6,7 +6,7 @@
 /*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 11:26:06 by rchavez           #+#    #+#             */
-/*   Updated: 2024/06/27 09:52:52 by rchavez          ###   ########.fr       */
+/*   Updated: 2024/07/05 11:29:50 by rchavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-typedef struct	s_link
+typedef struct s_link
 {
 	void			*data;
 	struct s_link	*next;
-}					link_t;
+}					t_link;
 
 int		ft_tolower(int c);
 int		ft_toupper(int c);
@@ -80,15 +80,15 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int		*get_bad(void);
 int		leak_size(void);
 
-void	link_free();
+void	link_free(void);
 void	fail_t(int nbr);
 void	free_t(void *ptr);
 void	link_rm(void *ptr);
 void	*malloc_t(size_t size);
-void	link_append(link_t *new);
+void	link_append(t_link *new);
 void	*malloc_t_bad(size_t size);
 
-link_t	**get_head(void);
+t_link	**get_head(void);
 
 char	*get_next_line(int fd);
 

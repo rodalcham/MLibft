@@ -6,7 +6,7 @@
 /*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 15:23:53 by rchavez           #+#    #+#             */
-/*   Updated: 2024/06/26 16:11:55 by rchavez          ###   ########.fr       */
+/*   Updated: 2024/07/05 11:27:51 by rchavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static size_t	ft_countwords(char const *s, char c)
 	return (x);
 }
 
-static size_t	ft_strxlen(char const *s, char c)
+static size_t	ft_xlen(char const *s, char c)
 {
 	size_t	i;
 
@@ -85,10 +85,10 @@ char	**ft_split(char const *s, char c)
 	{
 		while (s[j] && s[j] == c)
 			j++;
-		ret[i] = (char *)malloc_t_bad(sizeof(char) * (ft_strxlen(&s[j], c) + 1));
+		ret[i] = (char *)malloc_t_bad(sizeof(char) * (ft_xlen(&s[j], c) + 1));
 		if (!ret[i])
 			return (ft_splitfree(ret, i));
-		ft_voidcpy(ret[i], &s[j], (ft_strxlen(&s[j], c) + 1));
+		ft_voidcpy(ret[i], &s[j], (ft_xlen(&s[j], c) + 1));
 		while (s[j] != c && s[j] != '\0')
 			j++;
 		i++;

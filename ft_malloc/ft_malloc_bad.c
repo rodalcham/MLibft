@@ -6,7 +6,7 @@
 /*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 16:25:20 by rchavez           #+#    #+#             */
-/*   Updated: 2024/06/25 16:36:35 by rchavez          ###   ########.fr       */
+/*   Updated: 2024/07/05 11:30:40 by rchavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ void	fail_t(int nbr)
 
 void	*malloc_t_bad(size_t size)
 {
-	link_t	*new;
+	t_link	*new;
 
 	if (*get_bad() == 0)
 	{
 		*get_bad() = -1;
 		return (NULL);
 	}
-	new = (link_t *)malloc(sizeof(link_t));
+	new = (t_link *)malloc(sizeof(t_link));
 	if (!new)
 		return (NULL);
 	new->next = NULL;

@@ -6,7 +6,7 @@
 /*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 12:07:33 by rchavez           #+#    #+#             */
-/*   Updated: 2024/06/25 15:47:13 by rchavez          ###   ########.fr       */
+/*   Updated: 2024/07/05 11:29:28 by rchavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*malloc_t(size_t size)
 {
-	link_t	*new;
+	t_link	*new;
 
-	new = (link_t *)malloc(sizeof(link_t));
+	new = (t_link *)malloc(sizeof(t_link));
 	if (!new)
 		return (NULL);
 	new->next = NULL;

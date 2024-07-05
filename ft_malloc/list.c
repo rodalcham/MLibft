@@ -6,15 +6,15 @@
 /*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 15:12:53 by rchavez           #+#    #+#             */
-/*   Updated: 2024/06/25 16:21:20 by rchavez          ###   ########.fr       */
+/*   Updated: 2024/07/05 11:31:09 by rchavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_malloc.h"
 
-void	link_append(link_t *new)
+void	link_append(t_link *new)
 {
-	link_t	*list;
+	t_link	*list;
 
 	list = *get_head();
 	if (!list)
@@ -30,10 +30,10 @@ void	link_append(link_t *new)
 	}
 }
 
-void	link_free()
+void	link_free(void)
 {
-	link_t	*list;
-	link_t	*temp;
+	t_link	*list;
+	t_link	*temp;
 
 	list = *get_head();
 	if (!list)
@@ -50,8 +50,8 @@ void	link_free()
 
 void	link_rm(void *ptr)
 {
-	link_t	*list;
-	link_t	*prev;
+	t_link	*list;
+	t_link	*prev;
 
 	list = *get_head();
 	if (!list)
@@ -63,7 +63,7 @@ void	link_rm(void *ptr)
 		return ;
 	}
 	prev = list;
-	list = list->next; 
+	list = list->next;
 	while (list)
 	{
 		if (list->data == ptr)
@@ -79,7 +79,7 @@ void	link_rm(void *ptr)
 
 int	leak_size(void)
 {
-	link_t	*list;
+	t_link	*list;
 	int		ret;
 
 	list = *get_head();
