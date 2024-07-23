@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: rchavez@student.42heilbronn.de <rchavez    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 15:45:46 by rchavez           #+#    #+#             */
-/*   Updated: 2024/06/25 14:53:11 by rchavez          ###   ########.fr       */
+/*   Updated: 2024/07/23 17:05:12 by rchavez@stu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ static int	ft_isspace(int c)
 int	ft_atoi(const char *str)
 {
 	size_t		i;
-	int			x;
-	long int	min;
+	long int	x;
+	int	min;
 
 	i = 0;
 	x = 0;
