@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rchavez@student.42heilbronn.de <rchavez    +#+  +:+       +#+        */
+/*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 15:45:46 by rchavez           #+#    #+#             */
-/*   Updated: 2024/07/23 17:05:12 by rchavez@stu      ###   ########.fr       */
+/*   Updated: 2024/09/19 10:37:06 by rchavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_atoi(const char *str)
 {
 	size_t		i;
 	long int	x;
-	int	min;
+	int			min;
 
 	i = 0;
 	x = 0;
